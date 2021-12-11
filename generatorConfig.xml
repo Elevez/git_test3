@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC
+        "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+    <context id="simple" targetRuntime="MyBatis3Simple">
+        <!--配置数据库连接基本信息-->
+        <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
+                        connectionURL="jdbc:mysql://localhost:3306/hrsystem?serverTimezone=Asia/Shanghai"
+                        userId="root" password="123456"/>
+
+        <!--配置实体类的生成-->
+        <javaModelGenerator targetPackage="cn.edu.hzvtc.entity" targetProject="./src"/>
+
+        <!--配置映射文件的生成位置-->
+        <sqlMapGenerator targetPackage="cn.edu.hzvtc.mapper" targetProject="./src"></sqlMapGenerator>
+
+        <!--配置接口文件的生成位置-->
+        <javaClientGenerator type="XMLMAPPER" targetPackage="cn.edu.hzvtc.dao" targetProject="./src"/>
+
+        <!--配置数据表与实体的关系-->
+        <table tableName="tbl_department" domainObjectName="Department"/>
+        <table tableName="tbl_employee" domainObjectName="Employee"/>
+        <table tableName="tbl_admin" domainObjectName="Admin"/>
+
+
+        <table tableName="FooTable" />
+    </context>
+</generatorConfiguration>
