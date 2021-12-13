@@ -25,6 +25,11 @@ public class AaminController {
         return "login";
     }
 
+    @RequestMapping("/toLogin_git_test")
+    public String toLogin(){
+        return "login";
+    }
+
     @RequestMapping("/home")
     public String toHome(){
         return "home";
